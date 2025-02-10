@@ -23,15 +23,15 @@ export async function POST(req: NextRequest) {
       payment_method_types: ["card"],
       mode: "payment",
       shipping_address_collection: {
-        allowed_countries: ["US", "CA"],
+        allowed_countries: ["US", "CA", "IN"],
       },
       shipping_options: [
-        { shipping_rate: "shr_1MfufhDgraNiyvtnDGef2uwK" },
-        { shipping_rate: "shr_1OpHFHDgraNiyvtnOY4vDjuY" },
+        { shipping_rate: "shr_1QqaDdC5PeuDbH6FtWHcaGYw" },
+        { shipping_rate: "shr_1QqZHmC5PeuDbH6Fwu4tRH58" },
       ],
       line_items: cartItems.map((cartItem: any) => ({
         price_data: {
-          currency: "cad",
+          currency: "INR",
           product_data: {
             name: cartItem.item.title,
             metadata: {
